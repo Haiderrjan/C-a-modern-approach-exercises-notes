@@ -1,3 +1,7 @@
+#gitignore stuff for c clion
+
+#C / C++ 
+
 # Prerequisites
 *.d
 
@@ -53,3 +57,72 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+
+# Compiled Object files
+*.slo
+
+
+
+# Fortran module files
+*.smod
+
+# Compiled Static libraries
+*.lai
+
+
+
+# Build directories
+build/
+build-*/
+
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+*.swp
+
+# vcpkg
+vcpkg_installed/
+
+
+# test output & cache
+Testing/
+.cache/
+
+
+
+
+# CMAKE
+
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+CMakeUserPresets.json
+
+# CLion
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+
+# Covers JetBrains IDEs: IntelliJ, GoLand, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+
+
+# CLion project files
+.idea
+cmake-build-*
+
+
+
