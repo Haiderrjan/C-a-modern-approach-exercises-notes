@@ -9,9 +9,16 @@ int main(void) {
 
     int k = ++i + j++;
 
-    printf("%d", k);
+    // printf("%d", k);
+    int b;
+    int c;
+
+    int a = 5;
+    c = (b = a + 2) - (a = 1);
+    printf("%d", c);
 
     return 0;
+
 
 
 
