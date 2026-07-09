@@ -24,9 +24,8 @@ int main(void) {
         hour = hour - 2;
         hour = hour - 10;
         printf("Equivalent 12-hour time: %d:%.2d PM", hour, minute);
-
     }
 
-
+    return 0;
 
 }
