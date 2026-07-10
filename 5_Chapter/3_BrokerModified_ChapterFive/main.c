@@ -4,9 +4,25 @@ int main(void) {
 
     float comission;
     float value;
+	float numberOfShare;
+	float pricePerShare;
+	float rival;
 
-    printf("Enter value of trade: ");
-    scanf("%f", &value);
+	printf("Number of share: ");
+	scanf("%f", &numberOfShare);
+
+	printf("Price per share: ");
+	scanf("%f", &pricePerShare);
+
+
+	value = numberOfShare * pricePerShare;
+
+
+	if (numberOfShare <= 2000) {
+		rival = 33.00f + 0.03f * numberOfShare;
+	} else {
+		rival = 33.00f + 0.02f * numberOfShare;
+	}
 
     if (value < 2500.00f) {
     	comission = 30.00f + 0.17f * value;
@@ -32,6 +48,11 @@ int main(void) {
     }
 
     printf("Comission: $%.2f\n", comission);
+    printf("Rival Comission: $%.2f\n", rival);
+
 
     return 0;
 }
+
+// Had to look up question confused me.
+
