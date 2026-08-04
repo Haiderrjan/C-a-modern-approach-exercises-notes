@@ -2,50 +2,31 @@
 
 int main(void) {
 
-
+    float twoDigit;
+    float tenFiller1;
+    float oneFiller2;
     int ten;
-    float num;
     int one;
-    float placeholder;
+
 
 
 
 
     printf("Enter a two-digit number: ");
-    scanf("%f", &num);
+    scanf("%f", &twoDigit);
 
-    ten = num / 10;
-
-
-
-
-    printf("%f",placeholder);
-
-    if (placeholder < 0) {
-        one = placeholder * 100;
-        one = one / 10;
-    }
+    tenFiller1 = twoDigit / 10.0f;
+    ten = tenFiller1;
 
 
+    oneFiller2 = (((twoDigit / 10.0f) - ten) * 10.0f) + 0.1;
+    one = oneFiller2;
 
-
-
-
-
-
-
-
-
-
-
-     printf("%d\n",ten);
-     printf("%d\n",one);
 
     printf("You entered the number: ");
 
-
-    if (num >= 10 && num < 20) {
-        ten = num;
+    if (twoDigit >= 10 && twoDigit < 20) {
+        ten = twoDigit;
         one = 100;
     }
 
@@ -90,7 +71,7 @@ int main(void) {
     }
 
 
-    if (one > 0) {
+    if (one != 0 && twoDigit > 19) {
         printf("-");
     }
 
@@ -115,14 +96,7 @@ int main(void) {
             break;
         default: printf("");
     }
-
-
-
-
-
-
-
-
+    
     return 0;
 
 
