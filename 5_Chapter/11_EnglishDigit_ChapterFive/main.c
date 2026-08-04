@@ -19,7 +19,7 @@ int main(void) {
     ten = tenFiller1;
 
 
-    oneFiller2 = (((twoDigit / 10.0f) - ten) * 10.0f) + 0.1;
+    oneFiller2 = (((twoDigit / 10.0f) - ten) * 10.0f) + 0.1f;
     one = oneFiller2;
 
 
@@ -96,7 +96,7 @@ int main(void) {
             break;
         default: printf("");
     }
-    
+
     return 0;
 
 
