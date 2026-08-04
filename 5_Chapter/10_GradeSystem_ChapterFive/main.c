@@ -29,14 +29,6 @@ int main(void) {
         default: printf("error number was greater than 100 or less than 0");
     }
 
-
-
-
-
-
-
-
-
     return 0;
 
 }
