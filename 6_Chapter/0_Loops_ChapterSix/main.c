@@ -39,12 +39,8 @@ int main(void) {
                 printf("Commands: 0 = clear, 1 = credit, 2 = debit");
                 printf("3 = balance, 4 = exit\n\n");
                 break;
-
         }
-
     }
-
-    return 0;
 }
 
 
