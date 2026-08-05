@@ -213,7 +213,7 @@ int i = 10;
 ```
 Therefore, a ``while`` loop is more peferable
 
-Some programmers use the following ``for`` statement to establish an invite loop:
+Some programmers use the following ``for`` statement to establish an infinite loop:
 ```
 for(;;) {
   ...
@@ -283,11 +283,10 @@ int n = 10; // user inputs a number (hardcoded for this example)
     printf("%d is prime \n", n,d);
   }
 ```
-The ``break`` statement is useful for writing loops to which to exit in the middle of the body rather the end
-here shown below:
+The ``break`` statement is useful for writing loops to which to exit in the middle of the
+body rather the end here shown below:
 
 ```
-  
 int n;
         
  for (;;) {
@@ -300,9 +299,9 @@ int n;
 ```
   
 A ``break`` statement transfer control out of the innermost enclosing ``while``
-``do`` or ``for`` statement.When these statement are nested the ``break`` statement only 
-escapes one level of nesting. If using on a switch statement it will transfer control out of the ``switch``
-statement but not out of the ``while`` loop.
+``do`` or ``for`` statement. When these statement are nested the ``break`` statement only 
+escapes one level of nesting. If using on a ``switch`` statement it will transfer control out 
+of the ``switch`` statement but not out of the ``while`` loop.
 
 ![break switch nest](images/image_13.png)
 
@@ -310,8 +309,8 @@ statement but not out of the ``while`` loop.
 ### The ``continue`` statement
 
 The ``continue`` statement transfers control to a point just before the end of the loop body.
-Control remains within the loop.The following example read a series of number and whenever a ``0`` is read the 
-``continue`` statement is executed:
+Control remains within the loop.The following example read a series of number and whenever a 
+``0`` is read the ``continue`` statement is executed:
 
 ```
 int n = 0;
@@ -329,7 +328,8 @@ int sum = 0;
 
 ### The ``goto`` statement
 
-The ``goto`` statement is capable of jumping to any statement in a function, porovided that the statement has a **label** is just an identifier placed at the beginning of a statment:
+The ``goto`` statement is capable of jumping to any statement in a function, provided that the 
+statement has a **label** is just an identifier placed at the beginning of a statement:
 
 ![label statement](images/image_14.png)
 
@@ -359,8 +359,8 @@ int n = 10; // user inputs a number (hardcoded for this example)
   }
 ```
 The ``goto`` statement is helpful once in a while as it's rarely needed in everyday C programming.
-Consider the problem of exiting oyut of a loop within a ``switch`` statement. we saw earlier, the 
-``break`` statment does not quite have the right effect so a ``goto`` solves that issue:
+Consider the problem of exiting out of a loop within a ``switch`` statement. we saw earlier, the 
+``break`` statement does not quite have the right effect so a ``goto`` solves that issue:
 
 ![switch using goto](images/image_16.png)
 
@@ -381,11 +381,10 @@ This example contains three statements:
 
 The null statement a good for one thing: Writing loops whose bodies
 are empty. an example of this is the prime-finding loop.
-If we move the ``if`` statment into the loop controlling expression,
+If we move the ``if`` statement into the loop controlling expression,
 the body of the loop becomes empty:
 
 ```
-
 // prime finding loop
 
 for (d = 2; d < n; d++) {
@@ -400,10 +399,10 @@ for (d = 2; d < n; && n % d !=0; d++)
 
 ```
 
-Converting an odinary loop into one with an empty body does not buy much 
+Converting an ordinary loop into one with an empty body does not buy much 
 however the new loop is often more concise but usually no more efficient.
 In a few cases though a loop with an empty body is clearly superior such as
-these loops are helpfuyl for reading character data. 
+these loops are helpful for reading character data. 
 
 
 
