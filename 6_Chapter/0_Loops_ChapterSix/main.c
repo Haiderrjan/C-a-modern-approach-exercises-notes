@@ -1,59 +1,33 @@
 #include <stdio.h>
 
 int main(void) {
-    int cmd;
-    float balance;
-    float credit;
-    float debit;
 
-    balance = 0.0f;
+    int i = 0;
 
-    printf("*** ACME Checkbook-Balancing Program ***\n");
-    printf("Commands: 0 = clear, 1 = credit, 2 = debit ");
-    printf("3 = balance, 4 = exit\n\n");
+    // printf("A:\n");
+    // while (i < 10) {
+    //      printf("%d ",i);
+    //     i++;
+    // }
+    // printf("\n");
+    //
+    //
+    // printf("B:\n");
+    // for (; i < 10; i++) {
+    //     printf("%d ", i );
+    // }
+    //
+    // printf("\n");
 
-    for (;;) {
-        printf("Enter command: ");
-        scanf("%d", &cmd);
+    printf("C:\n");
+   do {
+       printf("%d ",i);
+       i++;
 
-        switch (cmd) {
-            case 0:
-                balance = 0.0f;
-                break;
-            case 1:
-                printf("Enter an amount of credit: ");
-                scanf("%f", &credit);
-                balance += credit;
-                break;
-            case 2:
-                printf("Enter amount of debit: ");
-                scanf("%f", &debit);
-                balance -= debit;
-                break;
-            case 3:
-                printf("Current balance £%.2f\n", balance);
-                break;
-            case 4:
-                return 0;
-            default:
-                printf("Commands: 0 = clear, 1 = credit, 2 = debit");
-                printf("3 = balance, 4 = exit\n\n");
-                break;
-        }
-    }
+   }while (i < 10);
 
-    int n;
 
-      for (;;) {
-          printf("Enter a number (0 to stop): ");
-          scanf("%d", &n);
-          if (n == 0) {
-              break;
-          }
-
-          printf("%d cubed is %d", n, n * n * n);
-  }
-
+    return 0;
 
 }
 
@@ -162,3 +136,59 @@ int main(void) {
     //     ++i;
     //     square += odd;
     // }
+
+
+
+
+//   int cmd;
+//   float balance;
+//   float credit;
+//   float debit;
+//
+//   balance = 0.0f;
+//
+//   printf("*** ACME Checkbook-Balancing Program ***\n");
+//   printf("Commands: 0 = clear, 1 = credit, 2 = debit ");
+//   printf("3 = balance, 4 = exit\n\n");
+//
+//   for (;;) {
+//       printf("Enter command: ");
+//       scanf("%d", &cmd);
+//
+//       switch (cmd) {
+//           case 0:
+//               balance = 0.0f;
+//               break;
+//           case 1:
+//               printf("Enter an amount of credit: ");
+//               scanf("%f", &credit);
+//               balance += credit;
+//               break;
+//           case 2:
+//               printf("Enter amount of debit: ");
+//               scanf("%f", &debit);
+//               balance -= debit;
+//               break;
+//           case 3:
+//               printf("Current balance £%.2f\n", balance);
+//               break;
+//           case 4:
+//               return 0;
+//           default:
+//               printf("Commands: 0 = clear, 1 = credit, 2 = debit");
+//               printf("3 = balance, 4 = exit\n\n");
+//               break;
+//       }
+//   }
+//
+//   int n;
+//
+//     for (;;) {
+//         printf("Enter a number (0 to stop): ");
+//         scanf("%d", &n);
+//         if (n == 0) {
+//             break;
+//         }
+//
+//         printf("%d cubed is %d", n, n * n * n);
+// }
