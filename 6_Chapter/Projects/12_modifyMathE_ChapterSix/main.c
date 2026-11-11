@@ -12,7 +12,7 @@ int main(void) {
 
     printf("Enter a ε number (must be a floating-point number):");
     scanf("%lf", &flow);
-    
+
     for (;;) {
         fac = i * fac;
         decimal = 1 / fac;
