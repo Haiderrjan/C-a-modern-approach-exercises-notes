@@ -3,12 +3,24 @@
 
 int main(void) {
 
+    // Use typedef to create types named Int8, Int16, and Int 32. Define the types so that
+    // they represent 8-bit, 16-bit, and 32-bit integers on your machine.
 
-    double a = 010E2;
-    float b = 32.1E+5;
-    int c = 0790;
-    int d = 100_000;
-    float e = 3.978e-2;
+    typedef char Int8;
+    typedef short Int16;
+    typedef int Int32;
+
+
+
+    printf("%zu\n", sizeof(Int8));
+    printf("%zu\n", sizeof(Int16));
+    printf("%zu\n", sizeof(Int32));
+
+
+
+
+
+
 
 
 
@@ -17,9 +29,7 @@ int main(void) {
     return 0;
 }
 
-// (a) 077 // error
-// (b) 0x77
-// (c) 0XABC
+
 
 
 

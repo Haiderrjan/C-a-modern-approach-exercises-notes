@@ -4,15 +4,15 @@ constants in C? Classify each legal
 constant as either integer or 
 floating-point.
 
-(a) 010E2
+**(a)** `010E2`
 
-(b) 32.1E+5
+**(b)** `32.1E+5`
 
-(c) 0790
+**(c)** `0790`
 
-(d) 100_000
+**(d)** `100_000`
 
-(e) 3.987e-2
+**(e)** `3.987e-2`
 
 
 ### Answer:
@@ -22,7 +22,7 @@ floating-point.
 **(b)** legal and is a floating constant
 
 **(c)** illegal as it is an octal and 9 is not 
-a valid octal number.
+        valid octal number.
 
 **(d)**  illegal as underscores are invalid in C
 
