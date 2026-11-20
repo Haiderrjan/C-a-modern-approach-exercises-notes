@@ -13,14 +13,14 @@ The integer types are divided into two categories:
 - Sign
 - Unsigned
 
-#### sign Bit
+### sign Bit
 The leftmost bit of a signed integer which is known as the ***signed bit***
 is:
 - `0` if the number is positive or zero 
 - `1` if it is negative 
 
 example of the largest 17 bit integer has the binary representation of:
-`0111111111111111` which is `32,767` (2 to the power 15 - 1).
+`0111111111111111` which is `32,767` (2<sup>15</sup> - 1).
 
 By default, integer variables are signed in C 
 
@@ -37,7 +37,9 @@ in a `int` variable.
 to store a number in less space than normal. 
 
 To construct an integer type we can specify that a variable is `long` or `short signed`
-or `unsigned`. Here below are the six combination to produce different types.
+or `unsigned`. 
+
+Here below are the six combination to produce different types:
 
 ![image_1.png](images/image_1.png)
 
@@ -46,16 +48,16 @@ to another.
 
 Here below is a table to show the usual range of values for integer types on machine:
 
-#### 16-bit machine
+#### 16-bit machine:
 
 ![image_2.png](images/image_2.png)
  
 
-#### 32-bit machine
+#### 32-bit machine:
 
 ![image_3.png](images/image_3.png)
 
-#### 64-bit machine  
+#### 64-bit machine:
 
 ![image_4.png](images/image_4.png)
 
@@ -116,7 +118,7 @@ Contains only digits between `0` and `7` and must begin with a zero:
 Each position in an octal number represents a power of 8 thus an octal number of
 237 represents the decimal number: 
 
-(2 * 8<sup>2</sup>) + (3 * 8<sup>1</sup>) + (7 * 8<sup>0</sup>) = 128 + 24 + 7 = 159
+**(2 * 8<sup>2</sup>) + (3 * 8<sup>1</sup>) + (7 * 8<sup>0</sup>) = 128 + 24 + 7 = 159**
  
 
 #### Hexadecimal Constant
@@ -133,7 +135,7 @@ each position in a hex number represents a power of 16.
 
 So the hex number `1AF` has the decimal value of:
 
-(1 * 16<sup>2</sup>) + (10 * 16<sup>1</sup>) + (15 * 16<sup>0</sup>) = 256 + 160 + 15 = 431   
+**(1 * 16<sup>2</sup>) + (10 * 16<sup>1</sup>) + (15 * 16<sup>0</sup>) = 256 + 160 + 15 = 431** 
           
 
 Reminder that octal and hexadecimal are nothing more than alternative way of writing numbers and have no effect on how 
@@ -163,21 +165,21 @@ Overflow occurs depends on whether the operands were signed or unsigned
 
 When overflow happens during an operation on a signed integer, the program behavior is `undefined`.
 
-When overflow happens during an operation on a unsigned integer though the result is `defined` we get the 
+When overflow happens during an operation on an unsigned integer though the result is `defined` we get the 
 correct answer which is:
 
 modulo ***2<sup>n</sup>*** where  ***n*** is the number of bits used to store the result.
 
 ### Reading and Writing Integers
     
-When reading or writing an `unsinged` integer use the letter:
+When reading or writing an `unsigned` integer use the letter:
 - `u` - decimal (base 10)
 - `o` - octal (base 8)
 - `x` - hexadecimal (base 16)
 
-![image_6.1.png](images/image_6.1.png)
+![image_6.1.png](images/image_6_1.png)
 
-![image_6.2.png](images/image_6.2.png)
+![image_6.2.png](images/image_6_2.png)
 
 
                              
@@ -239,20 +241,20 @@ Macros that define the characteristics of the floating types can be found at
 
 In C99 floating types are divided into two categories.
    
-The ***Real Floating Types:
+The ***Real Floating Types***:
 - The `float` 
 - The `double` 
 - the `long double`
   
 The ***Complex Types*** (new to C99):
 - `float _Complex`
-- `double_Complex`
-- `long double_Complex`
+- `double _Complex`
+- `long double _Complex`
 
 
 ### Floating Constants
 
-Floating constant can be written in various ways, an example is the follwoing constant
+Floating constant can be written in various ways, an example is the following constant
 `57.0`:
 
 - `57.0`
@@ -278,7 +280,7 @@ Floating constant can be written in various ways, an example is the follwoing co
 
 - `570.e-1`
 
-By default, floating constant are stored as double-precision numbers in other wordds when A C
+By default, floating constant are stored as double-precision numbers in other words when a C
 compiler finds the constant `57.0` in a program, it arranges for the number to be stored in memory in the same format
 as a `double` variable.
 
@@ -307,7 +309,7 @@ When reading or writing value of type `long long double` put the letter:
 
 ## 7.3 Character Types 
 
-The most popular character set is ***ASCII** (American Standard Code for information interchange)
+The most popular character set is **ASCII** (American Standard Code for information interchange)
           
 It is a 7-bit code capable of representing `128` characters. 
 
@@ -315,7 +317,7 @@ In ASCII the digits `0-9`  are represented by the codes:
 - `0110000-0111001 `
 
 The uppercase letters `A-Z` are represented by the codes:
-- `1000001-1011010.`
+- `1000001-1011010`
 
 ASCII is often extended to a 256-character code known as ***Latin-1***
 
@@ -348,19 +350,19 @@ Consider this example below which assumes the ASCII character set:
 
 Characters can also be compared just as numbers can. 
 
-The following `if` statement checks whether `ch` contains a lowe-case, and if so it will convert `ch`
+The following `if` statement checks whether `ch` contains a lower-case, and if so it will convert `ch`
 to uppercase:
 
 ![image_14.png](images/image_14.png)
 
-We can easily write a `for` statement whose controll variable steps through all the upper-case letters:
+We can easily write a `for` statement whose control variable steps through all the upper-case letters:
 
 ![image_15.png](images/image_15.png)
                                         
  
 ### Signed and Unsigned Characters
 
-Since C allows characters to be used as integers, it should not be suproising that the 
+Since C allows characters to be used as integers, it should not be surprising that the 
 `char` type exist in both ***signed*** and ***unsigned*** versions.
 
 - Signed characters have values between `-128 and 127`
@@ -369,12 +371,13 @@ Since C allows characters to be used as integers, it should not be suproising th
 C standard does not specify whether ordinary `char` is signed or unsigned type
 as some compiler treat is one or the other.
 
-We should not care whether `char` is signed or unsigned unless if we using a character variable to store a 
+We should not care whether `char` is signed or unsigned unless if we're using a character variable to store a 
 small integer.
 
  
 - C89 uses the term ***Integral types*** to refer to both integer types and the character types. Enumerated types are also
   integral types.
+
 
 - C99 does not use the term ***"Integral types"*** instead it expands the meaning of ***"integer types"*** to include the 
   Character types and the enumerated types. C99 `_Bool` type is also to be unsigned integer type. 
@@ -386,7 +389,8 @@ small integer.
 The integer types and floating types are collectively known as ***arithmetic types*** and here below is 
 a summary of the arithmetic type in C89
 
-Integral types: 
+#### Integral types: 
+
 - `char`
 
 
@@ -399,16 +403,18 @@ Integral types:
 - Enumerated types
 
 
-Floating types:
+#### Floating types:
+
 - (`float`, `double`, `long double`)
 
 
 C99 has a more complicated hierarchy for its arithmetic types:
 
-Integer types:
+#### Integer types:
 
 - `char`
-                                                                                              
+
+                                                                                          
 - signed integer types, both standard (`signed char`, `short int `,`int`,`long int`, `long long int`)  and extended                            
                                                                                               
                                                                                               
@@ -418,13 +424,12 @@ Integer types:
 - Enumerated types 
 
 
-Floating types:                         
+#### Floating types: 
+
 - Real floating types (`float`, `double`, `long double`) 
 
 
 - Complex types (`float_Complex`, `double _Complex`, `long double _Complex`)
-
-
 
 ### Escape sequence
 
@@ -438,13 +443,13 @@ Here below is the complete set of escape sequences:
 ![image_16.png](images/image_16.png)
 
   
-To write a numeric escape for a particlar chartacter we first look ip the characters octal or hexdecimal value
+To write a numeric escape for a particular character we first look up the characters octal or hexadecimal value
 in a table 
 
 an Example the ASCII escape character (decimal value: `27`) has the value of `33` in octal and
 `1B` in hex. So either of the code can be used to write an escape sequence:
 
-Octal escape sequence:
+#### Octal escape sequence:
 
 - consist of the `\` character followed by an octal number with at most three digits
 
@@ -452,12 +457,12 @@ Octal escape sequence:
 - this number must be represented as an unsigned character so its maximum value is normally `377` octal
 
 
-- An example the escape characters could be written as `\33` or `\033`
+- An example is the escape characters could be written as `\33` or `\033`
 
 
 - Octal do not have to begin with `0`
 
-Hexadecimal escape sequence:
+#### Hexadecimal escape sequence:
 
 - Consist of `\x` followed by a hexadecimal number
 
@@ -549,7 +554,7 @@ We can use the `getchar` and `putchar` functions instead of `scanf` `printf`
 putchar(ch);
 ```
 
-Each time `getchar` is called it reads one character which i returns and in order to save the character we must 
+Each time `getchar` is called it reads one character which I return and in order to save the character we must 
 assign it to store it into a variable:
 
 ```
@@ -559,11 +564,12 @@ ch = getchar(); /* reads a character and stores it in ch */
 The `getchar` actually returns an `int` value rather than a `char` value.
 
 So it is not unusual for a variable to have type `int` rather than `char`
-if it will be used to store characater read by `getchar`
+if it will be used to store character read by `getchar`
 
 Like `scanf`, `getchar` does not skip white-spaces characters as it reads.
 
-Using `getchar` and `putchar` saves time for two reasons:
+
+#### Using `getchar` and `putchar` saves time for two reasons:
 
 - when the program is executed as `scanf` and `printf` are designed to read and write many kinds of datra in variety of format
 
@@ -571,8 +577,9 @@ Using `getchar` and `putchar` saves time for two reasons:
 - `getchar` and `putchar` are usually implemented as macros for additional speed
 
 
-`getchar` has another advantage over `scanf` as it returns the character that it reads and it lends itself to variouys C idioms
-Meaning things like loops that search for a character or skip over all occrrnecs of a character 
+`getchar` has another advantage over `scanf` as it returns the character that it reads, and it lends itself to 
+various C idioms Meaning things like loops that search for a character or skip over 
+all occurrences of a character 
 
 consider these `scanf` loop and then a `getchar` loop:
 
@@ -592,21 +599,23 @@ So a computer may be able to add two 16-bit integer directly
 but not a 16-bit integer and 32-bit integer or a 32-bit 
 integer and a 32 bit floating point number
 
-C however can allow basic types to be mixed in expressions and can combine integers, floating point numbers and even characers in a single expressions.
+C however can allow basic types to be mixed in expressions and 
+can combine integers, floating point numbers and even characters in a single 
+expressions.
 
 if we add a 16 bit `short` and a 32-bit `int` the compiler 
 will arrange for the `short` value to be converted to 
 32 bits `int`.
 
-so example if we add an `int` and `float`, the compiler 
+so an example if we add an `int` and `float`, the compiler 
 will arrange for the `int` to be converted to a `float` 
-format.
+format. Because the compiler handle this conversion automatically 
+without you the programmer involvement they are known as:
 
-Because the compiler handle this conversion automatically 
-without you the programmer involvement they are known as: 
-***Implicit Conversion***. 
+***Implicit Conversion!*** 
 
 C also has ***explicit Conversion***  using the **cast** operator.
+
 
 #### Implicit Conversion are preformed in the following situations:
 
@@ -630,18 +639,20 @@ C also has ***explicit Conversion***  using the **cast** operator.
 
 #### The Usual Arithmetic Conversion 
 
-The usual arithmetic conversion are applied to the operand of most binary operators including,
+- The usual arithmetic conversion are applied to the operand of most binary operators including,
 the arithmetic, relational and equality operators.
 
-So an example is if we have `float f` and `int i` and want to add both numbers
+
+- So an example is if we have `float f` and `int i` and want to add both numbers
 `f + i`
 
-The type are not the same so it's safe to convert `i` to `float` rather the other way around
+
+- The type are not the same so it's safe to convert `i` to `float` rather the other way around
 The reason is obvious; the lost of precision.
 
-The strategy behind the usual arithmetic conversion is to convert operands to the ***"Narrowest"*** type 
-that will safely accommodate both values.
 
+- The strategy behind the usual arithmetic conversion is to convert operands to the ***"Narrowest"*** type 
+that will safely accommodate both values.
 **(Roughly speaking, one type is narrower than another if it requires fewer bytes to store).**
 
 The types of the operands can often be made to match by converting the operand of the narrower type to the type of the other operand 
@@ -650,13 +661,13 @@ is known as ***Promotion***
 The most common promotion are the ***Integral Promotion*** which converts a character or `short` integer to type `int`
  or to `unsigned int` in some cases. 
 
-We can divide the rules for preforming the usual arithmetic conversion into two cases:
+#### We can divide the rules for preforming the usual arithmetic conversion into two cases:
 
-**The type of either operand is a floating type:**
+**The type of either operand is a floating type**
 
 ![image_20.png](images/image_20.png)
 
-**Neither operand type is a floating type:**
+**Neither operand type is a floating type**
 
 ![image_21.png](images/image_21.png)
 
@@ -699,17 +710,17 @@ Provided that all vales of the type can be represented using `int`
 
 **The type of either operand is a floating type:**
 
-As long as neither operand has a complex type, the rules are the same as before
+- As long as neither operand has a complex type, the rules are the same as before
 
 **Neither operand type is a floating type**:
 
-First: preform integer promotion on both operands
+- First: preform integer promotion on both operands
 
 
-Second: if the type of the two operands are now the same
+- Second: if the type of the two operands are now the same
 
 
-Third: The process ends
+- Third: The process ends
 
 Fourth: Otherwise, use the following rules, stopping at the first one that applies:
 
@@ -734,7 +745,7 @@ C provides ***casts*** which has the expression form as:
 
 ![image_24.png](images/image_24.png)
 
-`type-name` specifies the tyype to which the expression should be converted.
+`type-name` specifies the type to which the expression should be converted.
 
 The example below shows us how to case an expression to compute the fractional 
 part of a `float` value:
@@ -752,7 +763,7 @@ Cast expression enables us to document type conversion that would take place any
 i = (int) f; /* f is converted to int */
 ```
 
-This also enables us to overrule the compiler and focre it to do conversion that we want.
+This also enables us to overrule the compiler and force it to do conversion that we want.
 
 consider this example below:
 
@@ -762,7 +773,7 @@ int dividend, divisor;
 quotient = dividend / divisor;
 ```
 
-- As is written the result of the divison which is an `int` will be converted to a 
+- As is written the result of the division which is an `int` will be converted to a 
   `float`form before being stored in a `quotient`.
 
 - We probably want `dividend` and `divisor` to be converted to `float` before the division.
