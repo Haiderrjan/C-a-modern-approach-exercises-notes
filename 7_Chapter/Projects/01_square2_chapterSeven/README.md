@@ -9,3 +9,11 @@ integer types on your machine?
 
 ### Solution
 See `main.c`.
+
+### Answer:
+
+From the experiment I can conclude that the number of bits to store integer value
+is important as I used the value `200` for `short` and `long` and for `short` it gave
+me random numbers after `181` meaning it exceed its memory limit giving me random integers
+compared to `long` being able to store memory having more number of bits.
+
