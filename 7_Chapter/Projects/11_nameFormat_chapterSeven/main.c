@@ -1,64 +1,36 @@
 #include <stdio.h>
+#include <ctype.h>
 
 int main(void) {
-    char name;
-    char first;
-
-    int letters = 0;
-
+    char lastName;
+    char firstInital;
     char space;
 
 
     printf("Enter a first and last name: ");
 
-    first = getchar();
+    firstInital = getchar();
 
-
-    // while ((name = getchar()) != ' ') {
-    //     name = '\b';
-    //     printf("%c", name);
-    //
-    // }
-
+    firstInital = toupper(firstInital);
 
     for (;;) {
-        name = getchar();
+        lastName = getchar();
 
-        if (name == '\n') {
+        if (lastName == '\n') {
             break;
         }
 
-
-        if (name == ' ') {
-        
-            for (;;) {
-                name = '\b';
-
-                if (name == ) {
-                    break;
-                }
-            }
-
+        if (lastName == ' ') {
+            space = lastName;
         }
 
-        printf("%c", name);
-        letters += 1;
+        if (space == ' ' && lastName != ' ') {
+            printf("%c", lastName);
+        }
     }
 
 
-
-    char a = '\b';
-    int i = a;
-
-    printf("%d",i);
-
-
-
-    printf(", %c", first);
-
-
-
-
+    printf(", %c.", firstInital);
 
     return 0;
 }
