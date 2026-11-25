@@ -2,13 +2,12 @@
 #include <ctype.h>
 
 int main(void) {
-
     int min;
     int hour;
     int time;
 
-    int d1,d2,d3,d4,d5,d6,d7,d8;
-    int d1a,d2a,d3a,d4a,d5a,d6a,d7a,d8a;
+    int d1, d2, d3, d4, d5, d6, d7, d8;
+    int d1a, d2a, d3a, d4a, d5a, d6a, d7a, d8a;
 
     int check = 1;
     int compare;
@@ -20,7 +19,7 @@ int main(void) {
     d3 = 679;
     d4 = 767;
     d5 = 840;
-    d6 = 945 ;
+    d6 = 945;
     d7 = 1140;
     d8 = 1305;
 
@@ -34,20 +33,15 @@ int main(void) {
     indi = toupper(indi);
 
 
-
     // check to see if hour is 12 AND is after midnight
     if (hour == 12 && indi == 'A') {
-
         hour = 00;
-        min = 00;
     }
 
     // check to see if after afternoon
     if (indi == 'P' && hour != 12) {
         hour = hour + 10 + 2;
     }
-
-
 
 
     time = hour * 60 + min;
@@ -58,7 +52,7 @@ int main(void) {
         time = 1404 - time;
     }
 
-    printf("The time in minutes: %d minutes\n",time);
+    printf("The time in minutes: %d minutes\n", time);
 
 
     compare = d1 - time;
@@ -66,8 +60,8 @@ int main(void) {
     d1a = compare;
 
     if (check < 0) {
-        check = check * - 1;
-        d1a = d1a * - 1;
+        check = check * -1;
+        d1a = d1a * -1;
     }
 
 
@@ -78,8 +72,8 @@ int main(void) {
     if (check > compare) {
         check = compare;
         if (check < 0) {
-            check = check * - 1;
-            d2a = d2a * - 1;
+            check = check * -1;
+            d2a = d2a * -1;
         }
     }
 
@@ -89,8 +83,8 @@ int main(void) {
     if (check > compare) {
         check = compare;
         if (check < 0) {
-            check = check * - 1;
-            d3a = d3a * - 1;
+            check = check * -1;
+            d3a = d3a * -1;
         }
     }
 
@@ -101,8 +95,8 @@ int main(void) {
     if (check > compare) {
         check = compare;
         if (check < 0) {
-            check = check * - 1;
-            d4a = d4a * - 1;
+            check = check * -1;
+            d4a = d4a * -1;
         }
     }
 
@@ -113,8 +107,8 @@ int main(void) {
     if (check > compare) {
         check = compare;
         if (check < 0) {
-            check = check * - 1;
-            d5a = d5a * - 1;
+            check = check * -1;
+            d5a = d5a * -1;
         }
     }
 
@@ -124,7 +118,7 @@ int main(void) {
     if (check > compare) {
         check = compare;
         if (check < 0) {
-            check = check * - 1;
+            check = check * -1;
             d6a = d6a * -1;
         }
     }
@@ -136,7 +130,7 @@ int main(void) {
     if (check > compare) {
         check = compare;
         if (check < 0) {
-            check = check * - 1;
+            check = check * -1;
             d7a = d7a * -1;
         }
     }
@@ -147,8 +141,8 @@ int main(void) {
     if (check > compare) {
         check = compare;
         if (check < 0) {
-            check = check * - 1;
-            d8a = d8a * - 1;
+            check = check * -1;
+            d8a = d8a * -1;
         }
     }
 
@@ -160,8 +154,6 @@ int main(void) {
     // 3:45 pm 945 min
     // 7:00 pm 1140 min
     // 9:45 pm 1305 min
-
-
 
 
     if (check == d1a) {
@@ -176,10 +168,9 @@ int main(void) {
         printf("Closest departure time is 2:00 p.m,. arriving at 4:08 p.m.");
     } else if (check == d6a) {
         printf("Closest departure time is 3:45 p.m,. arriving at 5:55 p.m.");
-    }
-    else if (check == d7a) {
+    } else if (check == d7a) {
         printf("Closest departure time is 7:00 p.m,. arriving at 9:20 p.m.");
-    } else if (check == d8a){
+    } else if (check == d8a) {
         printf("Closest departure time is 9:45 p.m,. arriving at 11:58 p.m.");
     } else {
         printf("error wrong number given");
