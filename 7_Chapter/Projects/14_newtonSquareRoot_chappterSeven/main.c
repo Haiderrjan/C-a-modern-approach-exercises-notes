@@ -2,37 +2,45 @@
 #include <math.h>
 
 int main(void) {
+    double x;
+    double y;
+    double average;
+    double oldY;
+
+    double zero = 0.00001;
 
 
-    double y = 2;
+    printf("Enter a positive number: ");
 
-    double a = 3;
+    scanf("%lf", &x);
 
-    double avg;
-
-
-    avg = 0.5 * (1.732051 + 3/1.732051);
-
-    printf("%f\n", fabs(avg));
-
-    double i =  1.75  - 1.73214;
-    printf("%lf\n", i);
-
-    if ( 1.75  - 1.73214 < .00001 ) {
+    printf("Enter a initial guess: ");
+    scanf("%lf", &y);
 
 
+    for (;;) {
+        average = 0.5 * (y + x / y);
 
-        printf("%lf\n", i);
-        printf("it is less than the product\n");
+
+        oldY = y;
+
+        y = average;
+
+        double fabs(double average);
+        double fabs(double x);
+        double fabs(double y);
+        double fabs(double xy);
+
+        if (oldY - y < 0.00001) {
+            printf("Square root: %f",y);
+            break;
+        }
     }
+
 
     /// the formula is in the book
     /// do abs to get precise value only input once the value terminates
     /// for loop would do and a double :)
-
-
-
-
 
 
     // for (;;) {
